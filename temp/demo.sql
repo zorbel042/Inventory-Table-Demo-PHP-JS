@@ -85,8 +85,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(45) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
   `fullName` varchar(45) DEFAULT NULL,
-  `isDOW` int(11) DEFAULT NULL,
-  `stores_ID` int(11) DEFAULT NULL,
   `SMS` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `role` int(11) DEFAULT NULL,

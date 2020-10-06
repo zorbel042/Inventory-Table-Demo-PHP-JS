@@ -70,8 +70,8 @@ CREATE TABLE IF NOT EXISTS `inventory` (
 INSERT INTO `inventory` (`id`, `name`, `price`, `item_code`, `category`, `in_stock`) VALUES
 (1, 'Bike', '250', 'BK250IE','Bicicles & Parts',5),
 (2, 'Tire', '25', 'TR25IE','Bicicles & Parts', 15),
-(3, 'Handle Bar', '100', 'HB100ER','Bicicles & Parts',1);
-(4, 'Gear Shaft', '30', 'GS30RT','Bicicles & Parts',1);
+(3, 'Handle Bar', '100', 'HB100ER','Bicicles & Parts',1),
+(4, 'Gear Shaft', '30', 'GS30RT','Bicicles & Parts',10);
 
 -- --------------------------------------------------------
 

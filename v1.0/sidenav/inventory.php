@@ -124,7 +124,7 @@ include "../../php-files/db_connect.php";
             <br>
           <div class="row">
             <div class="col-12">
-              <button class="btn btn-success float-right" onclick="loadPage('pages/new_inventory_item.php')">Add Item</button>
+              <button class="btn btn-success float-right" onclick="loadPage('v1.0/pages/new_inventory_item.php')">Add Item</button>
             </div>
           </div>
         <?php } ?>

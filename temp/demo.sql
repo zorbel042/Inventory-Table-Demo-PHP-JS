@@ -97,18 +97,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `fullName`, `isDOW`, `stores_ID`, `SMS`, `email`, `role`) VALUES
-(1, 'admin', '1234', 'Human Customer', 1, 1, NULL, NULL, 5),
-(2, 'bmwservicewriter', '1234', 'BMW SW', 0, 2, '1234564321', 'test@test.com', 3),
-(3, 'bmwtransporter', '1234', 'BMW Transporter', 0, 2, NULL, NULL, 1),
-(4, 'bmwwasher', '1234', 'BMW Washer', 0, 2, NULL, NULL, 2),
-(5, 'bmwmanager', '1234', 'BMW Manager', 0, 2, NULL, NULL, 4),
-(6, 'fcservicewriter', '1234', 'FC Service Writer', 0, 3, NULL, NULL, 3),
-(7, 'fctransporter', '1234', 'FC Transporter', 0, 3, NULL, NULL, 1),
-(8, 'fcwasher', '1234', 'FC Washer', 0, 3, '1113334321', 'no@email.com', 2),
-(9, 'fcmanager', '1234', 'FC Manager', 0, 3, '', '', 4),
-(10, 'fctransporter2', '1234', 'FC Transporter2', 0, 3, '9569849345', 'no@email.com', 1),
-(11, 'fctransporter3', '1234', 'FC Transporter3', 0, 3, '1233214321', 'no@email.com', 1);
+INSERT INTO `users` (`id`, `username`, `password`, `fullName`,  `SMS`, `email`, `role`) VALUES
+(1, 'admin', '1234', 'Human Customer', NULL, NULL, 5),
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

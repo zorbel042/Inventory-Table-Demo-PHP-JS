@@ -20,8 +20,6 @@ if (ini_get("session.use_cookies")) {
 $_SESSION['userID']      = NULL; 
 $_SESSION['username']    = NULL;
 $_SESSION['fullName']    = NULL;
-$_SESSION['isDOW']       = NULL;
-$_SESSION['stores_ID']   = NULL;
 $_SESSION['SMS']         = NULL;
 $_SESSION['email']       = NULL;
 $_SESSION['transporter'] = NULL;

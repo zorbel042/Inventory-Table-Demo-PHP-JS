@@ -1,0 +1,5 @@
+<?php
+
+$statusLimit = 6;
+
+?>

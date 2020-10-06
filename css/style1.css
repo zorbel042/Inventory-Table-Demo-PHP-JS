@@ -1,0 +1,91 @@
+.bottom-padding {
+	padding-bottom: 12px;
+}
+
+.tableFixHead          { overflow-y: auto; height: 600px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+/* Just common table stuff. Really. */
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; }
+th     { background:#eee; }
+
+.btn-fix {
+    padding: 0;
+    border: none;
+
+    white-space: normal;
+}
+
+#searchbtn {
+	align-self: flex-end;
+}
+
+#searchinput {
+	align-self: flex-end;
+}
+
+#admincards {
+	height: 300px;
+  width: 300px;
+  cursor: pointer;
+	border-radius: 30px;
+	border-width: 10px;
+	border-color: #5AA5CB;
+
+}
+
+#admincards:hover {
+  background:lightgray;
+}
+
+#icons {
+	color: #5AA5CB;
+  margin-top: 0px; /*Add this*/
+  display: flex; /*Add this*/
+	align-items: center;
+}
+
+#icontext {
+	text-align: center;
+  margin-top: 0px; /*Add this*/
+  display: inline-block; /*Add this*/
+}
+
+.table-row-hover:hover {
+
+  background:lightgray;
+  cursor: pointer;
+}
+
+.thumbs-up-icon {
+
+  width:100%;
+  height:200%;
+
+}
+
+.thumbs-down-icon {
+
+  width:100%;
+  height:200%;
+
+}
+
+.rate-thumb-icon {
+  width:100%;
+  height:2000%;
+  margin: 30px -30px -30px 10px;
+}
+/* .rate-thumb-icon:hover {
+  background:lightgray;
+  cursor: pointer;
+} */
+.rate-button {
+  width:75%;
+
+}
+.rate-button:hover {
+background:lightgray;
+cursor: pointer;
+}

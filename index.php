@@ -3,25 +3,6 @@
 include "php-files/session_authenticate.php";
 include "php-files/db_connect.php";
 
-// just to avoid file routing issues we are placing it here
-// function countRequests(){
-
-//   if (file_exists("./../php-files/db_connect.php"))
-//   {
-//       include("./../php-files/db_connect.php");
-//   } else if (file_exist("../php-files/db_connect.php")) {
-//       include("../php-files/db_connect.php");
-//   } else {
-//       include("../../php-files/db_connect.php");
-//   }
-
-//   $transporter_ID = $_SESSION['userID'];
-//   $query = "SELECT requests.id, requests.status, requests.vin, requests.year, requests.make, requests.model, requests.ro, users.fullName FROM requests INNER JOIN users ON requests.requestedBy=users.id WHERE requests.transporter_ID = $transporter_ID";
-
-//   $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-//   $count = mysqli_num_rows($result);
-//   return $count;
-// }
 $username = "Admin";
 $password = "1234";
 

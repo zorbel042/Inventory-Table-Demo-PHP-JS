@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 include "../../php-files/db_connect.php";
 
 if (isset($_POST['name'])) {
@@ -13,7 +14,8 @@ if (isset($_POST['name'])) {
     $quantity    = mysqli_real_escape_string($connection, $_POST['quantity']);
     
     
-  $query = "INSERT INTO inventory (name, price, item_code, category, in_stock) VALUES ('$name', '$price', '$itemCode', '$category', '$quantity')";
+  $query = "INSERT INTO inventory (name, price, item_code, category, in_stock) 
+            VALUES ('$name', '$price', '$itemCode', '$category', '$quantity')";
   $run = mysqli_query($connection, $query);
 
   

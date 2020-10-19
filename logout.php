@@ -22,7 +22,6 @@ $_SESSION['username']    = NULL;
 $_SESSION['fullName']    = NULL;
 $_SESSION['SMS']         = NULL;
 $_SESSION['email']       = NULL;
-$_SESSION['transporter'] = NULL;
 
 // Finally, destroy the session.
 session_destroy();

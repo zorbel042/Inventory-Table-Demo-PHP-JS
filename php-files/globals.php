@@ -1,5 +1,0 @@
-<?php
-
-$statusLimit = 6;
-
-?>

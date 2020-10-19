@@ -36,15 +36,6 @@ if ($count >= 1){
 	$_SESSION['SMS'] = $row['SMS'];
 	$_SESSION['email'] = $row['email'];
 	$_SESSION['role'] = $row['role'];
-
-	// $_SESSION['userID'] = 1;
-	// $_SESSION['username'] = "zorb";
-	// $_SESSION['fullName'] = "Zorb Oh";
-	// $_SESSION['isDOW'] = 0;
-	// $_SESSION['stores_ID'] = 1;
-	// $_SESSION['SMS'] = 9994449944;
-	// $_SESSION['email'] = "noemail";
-	// $_SESSION['role'] = 3;
  
 	header("location: v1.0/home.php");
 

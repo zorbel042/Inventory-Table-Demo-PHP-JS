@@ -19,34 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `wfm`
+-- Database: `ecom`
 --
-CREATE DATABASE IF NOT EXISTS `wfm` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `wfm`;
-
---
--- Table structure for table `stores`
---
-
-DROP TABLE IF EXISTS `stores`;
-CREATE TABLE IF NOT EXISTS `stores` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  `city` varchar(45) DEFAULT NULL,
-  `state` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `stores`
---
-
-INSERT INTO `stores` (`id`, `name`, `city`, `state`) VALUES
-(1, 'DOW', 'McAllen', 'Texas'),
-(2, 'BMW', 'McAllen', 'Texas (TX)'),
-(3, 'Fiesta Chevrolet', 'Mission', 'Texas (TX)');
-
--- --------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS `ecom` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `ecom`;
 
 --
 -- Table structure for table `inventory`
@@ -67,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `inventory` (
 -- Dumping data for table `inventory`
 --
 
-INSERT INTO `inventory` (`id`, `name`, `price`, `item_code`, `category`, `in_stock`) VALUES
-(1, 'Bike', '250', 'BK250IE','Bicicles & Parts',5),
-(2, 'Tire', '25', 'TR25IE','Bicicles & Parts', 15),
-(3, 'Handle Bar', '100', 'HB100ER','Bicicles & Parts',1),
-(4, 'Gear Shaft', '30', 'GS30RT','Bicicles & Parts',10);
+INSERT INTO `inventory` (`id`, `name`, `price`, `item_code`, `category`, `in_stock`) 
+VALUES  (1, 'Bike', '250', 'BK250IE','Bicicles & Parts',5),
+        (2, 'Tire', '25', 'TR25IE','Bicicles & Parts', 15),
+        (3, 'Handle Bar', '100', 'HB100ER','Bicicles & Parts',1),
+        (4, 'Gear Shaft', '30', 'GS30RT','Bicicles & Parts',10);
 
 -- --------------------------------------------------------
 
@@ -96,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `fullName`,  `SMS`, `email`, `role`) VALUES
-(1, 'admin', '1234', 'Human Customer', NULL, NULL, 5),
+(1, 'admin', '1234', 'Human Customer', NULL, NULL, 5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -128,19 +128,19 @@ if ($count >= 1){
 
       function deleteInventoryItem(id) {
         loadPage("v1.0/delete_inventory_item.php?id=" + id);
-        Swal.fire({
-          title: 'Success!',
-          text: 'Quantity has been updated',
-          icon: 'success',
-          confirmButtonText: 'Cool'
-        })
+        // Swal.fire({
+        //   title: 'Success!',
+        //   text: 'Quantity has been adjusted',
+        //   icon: 'success',
+        //   confirmButtonText: 'Cool'
+        // })
 
       }
-      function addInventory(id) {
+      function addInventoryQuantity(id) {
         loadPage("v1.0/pages/add_inventory_item_quantity.php?id=" + id);
         Swal.fire({
           title: 'Success!',
-          text: 'Quantity has been updated',
+          text: 'Quantity has been adjusted',
           icon: 'success',
           confirmButtonText: 'Cool'
         })

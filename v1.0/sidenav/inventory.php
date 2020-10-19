@@ -77,7 +77,7 @@ include "../../php-files/db_connect.php";
 
                 if ($edit && $delete) {
 
-                $displayLocation .= "<td><center><button class='btn' onclick='deleteInventoryQuantity(".$row['id'].");'>".$minus."</button><input style='text-align: center;' type='text' class='col-2' name='updateQty' value='1' disabled><button class='btn' onclick='addInventory(".$row['id'].");'>".$plus."</button></center></td>";
+                $displayLocation .= "<td><center><button class='btn' onclick='deleteInventoryQuantity(".$row['id'].");'>".$minus."</button><input style='text-align: center;' type='text' class='col-2' name='updateQty' value='1' disabled><button class='btn' onclick='addInventoryQuantity(".$row['id'].");'>".$plus."</button></center></td>";
                 $displayLocation .= "<td><center><button class='btn btn-danger' onclick='deleteInventoryItem(".$row['id'].");'>Delete</button></center></td>";
 
                 }

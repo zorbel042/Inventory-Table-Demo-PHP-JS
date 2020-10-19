@@ -93,11 +93,59 @@ include "../../php-files/db_connect.php";
         </table>
         <?php if ($add) { ?>
             <br>
+        <form method="POST" action="v1.0/pages/new_inventory_item.php" id="new_inventory_item">
+
+          <div class="row bottom-padding">
+            <div class="col">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="itemName" name="name" class="form-control">
+                <p id="itemNameError" style="color: red; position: absolute;"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Price</label>
+                <input type="text" id="price" name="price" class="form-control">
+                <p id="priceError" style="color: red; position: absolute;"></p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label>Item Code</label>
+                <input type="text" id="itemCode" name="itemCode" class="form-control">
+                <p id="itemCodeError" style="color: red; position: absolute;"></p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label>Category</label>
+                <select class="form-control custom-select" id="category" name="category" size="">
+                    <option>Select</option>
+                    <option value="Bicycles & Parts">Bicycles & Parts</option>
+                    <option value="Sportswear & Gear">Sportswear & Gear</option>
+                </select>
+                <p id="categoryError" style="color: red; position: absolute;"></p>
+              </div>
+            </div>
+          <div class="col">
+              <div class="form-group">
+                <label>Quantity</label>
+                <input type="text" id="quantity" name="quantity" class="form-control">
+                <p id="quantityError" style="color: red; position: absolute;"></p>
+              </div>
+            </div>
+            </div>
+
           <div class="row">
             <div class="col-12">
-              <button class="btn btn-success float-right" onclick="loadPage('v1.0/pages/new_inventory_item.php')">Add Item</button>
+              <button type="button" class="btn btn-success float-right" onclick="validateInventoryItem('new');">Add Item</button>
             </div>
           </div>
+
+          </form>
         <?php } ?>
       </div>
     </div>

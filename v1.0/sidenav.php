@@ -32,7 +32,7 @@
         <!--- End of Check if Current Logged in User is Admin -->
         <li class="nav-item">
           <a class="nav-link" onclick="loadPage('v1.0/sidenav/inventory.php')" href="#">
-            <i class="nav-icon fas fa-car"></i>
+            <i class="nav-icon fas fa-bicycle"></i>
             <p>
               Inventory
             </p>

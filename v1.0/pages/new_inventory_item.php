@@ -19,8 +19,7 @@ if (isset($_POST['name'])) {
   $run = mysqli_query($connection, $query);
 
   
-   header("location: ../home.php");// routes back home... DO NOT WANT
-//   header('Home: ../sidenav/inventory.php');
+   header("location: ../../index.php");
 
 } else { 
 
@@ -45,7 +44,7 @@ if (isset($_POST['name'])) {
 </div>
 
 <div class="container">
-  <form method="POST" action="pages/new_inventory_item.php" id="new_inventory_item">
+  <form method="POST" action="v1.0/pages/new_inventory_item.php" id="new_inventory_item">
     <section class="content">
       <div class="card">
         <div class="card-body">

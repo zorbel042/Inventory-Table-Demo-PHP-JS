@@ -7,27 +7,10 @@ include "../../php-files/db_connect.php";
   $edit = true;
   $delete = true;
 
-  // $store = $_SESSION['stores_ID'];
-  // $query = "";
-  // $result = "";
 
   $query = "SELECT * FROM inventory ORDER BY name";
   $result = mysqli_query($connection, $query);
 
-  // if ($_SESSION['isDOW'] == 1 && $_SESSION['role'] == 5) {
-
-  //   $add = true;
-  //   $edit = true;
-  //   $delete = true;
-
-  //   $query = "SELECT * FROM inventory ORDER BY name";
-
-  // } else {
-  //   echo "<div class='content-header'><h2 style='color:red;'>Warning! </h2> Check your db settings if you are getting an error</div>";
-
-  // }
-
-  // $result = mysqli_query($connection, $query);
 
 ?>
 
@@ -40,7 +23,7 @@ include "../../php-files/db_connect.php";
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Locations</li>
+          <li class="breadcrumb-item active">Inventory</li>
         </ol>
       </div>
     </div>
@@ -69,25 +52,16 @@ include "../../php-files/db_connect.php";
               <th>Item</th>
               <th>Price</th>
               <th>Quantity</th>
-
-              <?php
-                // $minus = "<span style='font-weight:900;'>-</span>";
-                // $plus = "<span style='font-weight:900;'>+</span>";
-                $minus = "<img style='height:16px;width:auto;' src='css/open-iconic-master/svg/minus.svg'>";
-                $plus = "<img style='height:16px;width:auto;' src='css/open-iconic-master/svg/plus.svg'>";
-
-        
-                if ($edit && $delete) {
-                  echo "<th style='text-align: center;'>Update Quantity</th>";
-                  echo "<th></th>";
-                }
-              ?>
-
+              <th style='text-align: center;'>Update Quantity</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
 
-            <?php
+          <?php
+
+          $minus = "<img style='height:16px;width:auto;' src='css/open-iconic-master/svg/minus.svg'>";
+          $plus = "<img style='height:16px;width:auto;' src='css/open-iconic-master/svg/plus.svg'>";
 
           for ($i=0; $i < mysqli_num_rows($result); $i++) {
 
@@ -104,19 +78,16 @@ include "../../php-files/db_connect.php";
                 if ($edit && $delete) {
 
                 $displayLocation .= "<td><center><button class='btn' onclick='deleteInventoryQuantity(".$row['id'].");'>".$minus."</button><input style='text-align: center;' type='text' class='col-2' name='updateQty' value='1' disabled><button class='btn' onclick='addInventory(".$row['id'].");'>".$plus."</button></center></td>";
-
                 $displayLocation .= "<td><center><button class='btn btn-danger' onclick='deleteInventoryItem(".$row['id'].");'>Delete</button></center></td>";
 
                 }
 
                 $displayLocation .= "</tr>";
-
                 echo $displayLocation;
 
               }
 
             ?>
-
           </tbody>
 
         </table>

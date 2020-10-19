@@ -15,8 +15,6 @@ $count = mysqli_num_rows($result);
 
 if ($count >= 1){ 
 
-	// session_start();
-
 	$row = mysqli_fetch_array($result);
 
 	// CREATES SESSION VARIABLES 
@@ -100,31 +98,6 @@ if ($count >= 1){
         xhttp.send();
       }
 
-      // Function to Show Detailed Modal View on Request Click
-      function getStatus(id) {
-
-        $.get("pages/view_request.php?rID=" + id, function(data) {
-          $('#modal-xl').modal({show:true});
-          $("#modal-xl-data").html(data);
-        });
-
-      }
-
-      // Function to Show Rating Modal View on Rate Click
-
-      
-      function editLocation(userID) {
-        loadPage("v1.0/pages/edit_locations.php?id=" + userID);
-      }
-
-      function deleteLocation(id) {
-
-        if (confirm("Are you sure you want to delete this Location?")) {
-          loadPage("v1.0/delete_location.php?id=" + id);
-        } else {
-          event.preventDefault();
-        }
-
 
         //INVENTORY!!!
 
@@ -162,60 +135,6 @@ if ($count >= 1){
           icon: 'success',
           confirmButtonText: 'Cool'
         })
-
-      }
-
-      // Validation of Location Function Begin Here
-      function validateLocation (formName) {
-
-        var storeName      = document.getElementById("storeName");
-        var storeNameError = document.getElementById("storeNameError");
-
-        var city      = document.getElementById("city");
-        var cityError = document.getElementById("cityError");
-
-        var state      = document.getElementById("state");
-        var stateError = document.getElementById("stateError");
-
-        var pass = true;
-
-
-        if (storeName.value == "") {
-          storeName.classList.add("is-invalid");
-          storeNameError.innerHTML = "Store Name is Required";
-          pass = false;
-        } else {
-          storeName.classList.remove("is-invalid");
-          storeNameError.innerHTML = "";
-        }
-
-
-        if (city.value == "") {
-          city.classList.add("is-invalid");
-          cityError.innerHTML = "City is Required";
-          pass = false;
-        } else {
-          city.classList.remove("is-invalid");
-          cityError.innerHTML = "";
-        }
-
-
-        if (state.value == "Select") {
-          state.classList.add("is-invalid");
-          stateError.innerHTML = "State is Required";
-          pass = false;
-        } else {
-          state.classList.remove("is-invalid");
-          stateError.innerHTML = "";
-        }
-
-        if (pass) {
-          if (formName == 'new') {
-            document.getElementById("new_location").submit();
-          } else {
-            document.getElementById("edit_location").submit();
-          }
-        }
 
       }
 

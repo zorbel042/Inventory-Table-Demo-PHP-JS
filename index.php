@@ -99,18 +99,10 @@ if ($count >= 1){
       }
 
 
-      function deleteLocation(id) {
-
-        if (confirm("Are you sure you want to delete this Location?")) {
-          loadPage("v1.0/delete_location.php?id=" + id);
-        } else {
-          event.preventDefault();
-        }
-
 
         //INVENTORY!!!
 
-      }
+
       function editInventory(id) {
         loadPage("v1.0/pages/edit_inventory_item_quantity.php?id=" + userID);
       }

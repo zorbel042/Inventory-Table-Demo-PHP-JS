@@ -24,7 +24,7 @@ if (isset($_POST['name'])) {
 } else { 
 
 ?>
-
+<!-- 
 <div class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
@@ -101,6 +101,6 @@ if (isset($_POST['name'])) {
       </div>
     </section>
   </form>
-</div>
+</div> -->
 
 <?php } ?>

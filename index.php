@@ -117,33 +117,33 @@ if ($count >= 1){
 
       function deleteInventoryQuantity(id) {
         loadPage("v1.0/delete_inventory_item_quantity.php?id=" + id);
-        Swal.fire({
-          title: 'Success!',
-          text: 'Quantity has been updated',
-          icon: 'success',
-          confirmButtonText: 'Cool'
-        })
+        // Swal.fire({
+        //   title: 'Success!',
+        //   text: 'Quantity has been updated',
+        //   icon: 'success',
+        //   confirmButtonText: 'Cool'
+        // })
 
       }
 
       function deleteInventoryItem(id) {
         loadPage("v1.0/delete_inventory_item.php?id=" + id);
+        Swal.fire({
+          title: 'Success!',
+          text: 'We didn\'t need to sell that anyway!',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
+
+      }
+      function addInventoryQuantity(id) {
+        loadPage("v1.0/add_inventory_item_quantity.php?id=" + id);
         // Swal.fire({
         //   title: 'Success!',
         //   text: 'Quantity has been adjusted',
         //   icon: 'success',
         //   confirmButtonText: 'Cool'
         // })
-
-      }
-      function addInventoryQuantity(id) {
-        loadPage("v1.0/pages/add_inventory_item_quantity.php?id=" + id);
-        Swal.fire({
-          title: 'Success!',
-          text: 'Quantity has been adjusted',
-          icon: 'success',
-          confirmButtonText: 'Cool'
-        })
 
       }
 
@@ -222,6 +222,7 @@ if ($count >= 1){
           document.getElementById("new_inventory_item").submit();
         } else {
           document.getElementById("new_inventory_item").submit();
+          
         }
       }
 

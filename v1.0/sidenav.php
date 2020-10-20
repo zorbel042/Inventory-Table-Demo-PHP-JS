@@ -6,7 +6,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="#" class="brand-link">
-    <img src="images/logos/E-ComLogo.gif" alt="E-Com Logo" style="width: 200px; height: 80px;">
+  <!-- <img src="images/logos/E-ComLogo.gif" alt="E-Com Logo" style="width: 200px; height: 80px;"> -->
+  <img src="images/logos/bikelogo.png" alt="Bike Shop Logo" style="width: 200px; height: 80px;">
   </a>
 
   <!-- Sidebar -->
